@@ -1,6 +1,6 @@
 package br.unicamp.ic.inf300;
 
-import br.unicamp.ic.inf300.sort.QuickSort;
+import br.unicamp.ic.inf300.sort.BubbleSort;
 
 public class VectorSorter {
 	
@@ -29,7 +29,7 @@ public class VectorSorter {
 	}
 	
 	public void sort() {
-		QuickSort s = new QuickSort();
+		BubbleSort s = new BubbleSort();
 		s.sort(vector);
 	}
 	
