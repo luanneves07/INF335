@@ -11,9 +11,8 @@ class StackArrayTest {
 	@Test
 	void testaInsercaoNaPilha() {
 		StackArray array = new StackArray();
-		assertEquals(0, array.size());
 		array.push(15);
-		assertEquals(1, array.size());
+		assertEquals(false, array.isEmpty());
 	}
 	
 	@Test
@@ -31,4 +30,44 @@ class StackArrayTest {
 		assertEquals(15, array.peek());
 	}
 
+	@Test
+	void testaVerificacaoDeTamanho() {
+		StackArray array = new StackArray();
+		assertEquals(true, array.isEmpty());
+		array.push(15);
+		assertEquals(false, array.isEmpty());
+	}
+	
+	@Test
+	void testaIdentificacaoDeArrayCheio() {
+		StackArray array = new StackArray();
+		int[] samples = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+		for (int i : samples) {
+			array.push(i);
+		}
+		assertEquals(true, array.isFull());
+	}
+	
+	@Test
+	void testaContadorDeTamanhoDoArray() {
+		StackArray array = new StackArray();
+		int[] samples = {0, 1};
+		for (int i : samples) {
+			array.push(i);
+		}
+		assertEquals(2, array.size());
+	}
+	
+	@Test
+	void testaLimpadorDoArray() {
+		StackArray array = new StackArray();
+		int[] samples = {0, 1};
+		for (int i : samples) {
+			array.push(i);
+		}
+		array.makeEmpty();
+		assertEquals(true, array.isEmpty());
+	}
+	
+	
 }
