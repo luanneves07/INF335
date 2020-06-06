@@ -53,7 +53,10 @@ public class QuickSort  {
 
     private void exchange(int i, int j) {
         int temp = numbers[i];
-        numbers[j] = numbers[i];
+//        DE:
+//        numbers[j] = numbers[i];
+//        PARA:
+        numbers[i] = numbers[j];
         numbers[j] = temp;
     }
 }
