@@ -62,7 +62,7 @@ public class StackArray {
             stackArray[top] = value;
         } else {
             resize(maxSize * 2);
-            //push(value); // don't forget push after resizing
+            push(value); // don't forget push after resizing
         }
     }
 
