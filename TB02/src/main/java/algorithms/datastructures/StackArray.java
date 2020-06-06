@@ -9,7 +9,7 @@
  *
  * @author Modified based on https://github.com/TheAlgorithms/Java
  */
-package algorithms.datastructures;
+package main.java.algorithms.datastructures;
 
 public class StackArray {
 
