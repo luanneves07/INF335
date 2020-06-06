@@ -3,6 +3,7 @@ package br.unicamp.ic.inf300.sort;
 public class BubbleSort {
 	
 	public void sort(int[] vector) {
+		int counter = 0;
 		boolean switched = true;
 		int aux;
 		while (switched) {
@@ -13,6 +14,7 @@ public class BubbleSort {
 					vector[i] = vector[i + 1];
 					vector[i+1] = aux;
 					switched = true;
+					counter++;
 				}
 			}
 		}
